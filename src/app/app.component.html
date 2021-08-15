@@ -1,1 +1,3 @@
+<app-header></app-header>
+<app-sidenav [ngClass]="{'is-open-sidenav': appService.isSidenavOpen$ | async}"></app-sidenav>
 <router-outlet></router-outlet>

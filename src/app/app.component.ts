@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
+import {AppService} from "./app.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-job-itstep';
+  constructor(
+    public appService: AppService,
+    private renderer: Renderer2,
+  ) {
+    this.appService.isSidenavOpen$.subscribe(isOpen => {
+      if (isOpen) {
+        this.renderer.addClass(document.body, 'sidenav-open');
+        this.renderer.removeClass(document.body, 'sidenav-close');
+      }
+      else {
+        this.renderer.addClass(document.body, 'sidenav-close');
+        this.renderer.removeClass(document.body, 'sidenav-open');
+      }
+    });
+  }
 }

@@ -1,0 +1,17 @@
+<button mat-icon-button (click)="toggleSidenav()">
+  <mat-icon>menu</mat-icon>
+</button>
+<p>header works!</p>
+
+<div>
+  <mat-icon>location_on</mat-icon>
+  Kiev
+</div>
+<button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>language</mat-icon>
+  EN
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
