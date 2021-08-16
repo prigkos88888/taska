@@ -1,27 +1,42 @@
-# TestJobItstep
+https://www.figma.com/file/B3btXO8PsarqxgeToXPosu/Untitled
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+#### Основные требования
 
-## Development server
+1. Клонировать этот репозиторий
+2. Создать свой публичный репозиторий
+3. По завершению работы предоставить ссылку на свой публичный репозиторий
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Адаптивная верстка с использованием Bootstrap и БЭМ
 
-## Code scaffolding
+Минимизировать количество стилей, путем импорта только тех компонентов которые используются в проекте
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Поддержка браузеров - https://angular.io/guide/browser-support
 
-## Build
+#### HEADER
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Фиксирован, виден всегда.
+Состоит из:
+- Кнопка переключения меню - при клике отображает или скрывает меню
+- Заголовок
+- Местоположение
+- Выбор языка - при клике отображается список доступных языков. Переопределить стили списка на свое усмотрение (размер шрифта, цвет при ховере)
 
-## Running unit tests
+#### SIDENAV
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+По умолчанию скрыт
 
-## Running end-to-end tests
+При открытии, размер блока основного контента уменьшается на размер sidenav и затемняется
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+Когда содержимое переполняет sidenav в нем появляется прокрутка
 
-## Further help
+#### CONTENT
+- Строка поиска - содержит поле подсказки и ошибки, переопределить стили подсказки и ошибки на свое усмотрение (размер шрифта, цвет), при ошибке изменить цвет обводки текстового поля на красный
+- Выпадающий список - переопределить стили списка на свое усмотрение (размер шрифта, цвет при ховере)
+- Кнопка добавления - при клике открывается модальное окно
+- Импорт, экспорт - при ховере переопределить стили на свое усмотрение
+- Таблица с данными - при переполнении по горизонтали появляется прокрутка, стилизовать согласно дизайну
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+#### DIALOG
+
+При переполнении появляется вертикальная прокрутка на всю страницу. Стилизовать согласно дизайну
