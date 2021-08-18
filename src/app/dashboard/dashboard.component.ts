@@ -96,7 +96,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-      width: '900px',
+      width: '768px',
       data: {
         component: AddDialogComponent,
       },

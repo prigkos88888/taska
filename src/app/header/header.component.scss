@@ -1,0 +1,66 @@
+@import '../styles/config';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px 0 24px;
+  background: #F8F8F8;
+  min-height: $height-header;
+  border-bottom: 1px solid #E1E2E2;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+
+  .part-left,
+  .part-right {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+      color: $black;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.15px;
+      text-transform: capitalize;
+      font-weight: 400;
+      color: $light-grey;
+      margin-left: 5px;
+    }
+
+    .language {
+      background: $bg-transparent;
+      padding: 5px 10px;
+      min-width: initial;
+      line-height: initial;
+      margin-left: 20px !important;
+      transition: all 0.2s;
+
+      &:hover {
+        background: $light-grey-hover;
+      }
+    }
+
+    .icon-menu {
+      background: $bg-transparent;
+      margin-right: 7px;
+      transition: all 0.2s;
+
+      &:hover {
+        background: $light-grey-hover;
+      }
+    }
+  }
+}

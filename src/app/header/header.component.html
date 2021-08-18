@@ -1,17 +1,27 @@
-<button mat-icon-button (click)="toggleSidenav()">
-  <mat-icon>menu</mat-icon>
-</button>
-<p>header works!</p>
+<div class="header">
 
-<div>
-  <mat-icon>location_on</mat-icon>
-  Kiev
+  <div class="part-left">
+    <button class="icon-menu" mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <h2>Corporate client base</h2>
+  </div>
+
+  <div class="part-right">
+    <div class="location">
+      <mat-icon>location_on</mat-icon>
+      <span>Kiev</span>
+    </div>
+
+    <button class="language" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>language</mat-icon>
+      <span>En</span>
+    </button>
+
+    <mat-menu class="standart-mat-menu" #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
 </div>
-<button mat-button [matMenuTriggerFor]="menu">
-  <mat-icon>language</mat-icon>
-  EN
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>

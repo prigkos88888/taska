@@ -1,0 +1,76 @@
+@import '../styles/config';
+
+.left-menu {
+  width: $left-sidebar;
+  box-sizing: border-box;
+  padding: 15px 32px 15px 19px;
+  background: $white;
+  height: calc(100vh - #{$height-header});
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  overflow-y: auto;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $light-grey;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 8px 15px;
+    border-radius: 4px;
+
+    &.active {
+      background: $blue-light-opacity;
+
+      &.long-name span {
+        font-size: 17.5px;
+      }
+
+      mat-icon {
+        color: $blue;
+      }
+
+      span {
+        font-size: 20px;
+        color: $blue;
+        line-height: 24px;
+        font-weight: 600;
+      }
+    }
+
+    span {
+      margin-left: 16px;
+      color: $light-grey;
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    &:hover {
+      color: $blue;
+      background: $blue-light-opacity;
+
+      span {
+        color: $blue;
+      }
+
+      mat-icon {
+        color: $blue;
+      }
+    }
+  }
+}
+

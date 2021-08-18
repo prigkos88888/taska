@@ -1,37 +1,41 @@
+<div class="line-first">
 <form [formGroup]="searchFG">
-  <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
+  <mat-form-field class="search" appearance="outline">
+    <mat-label>Search</mat-label>
     <input matInput formControlName="searchText" placeholder="Placeholder">
     <mat-icon matPrefix>search</mat-icon>
-    <mat-hint>Hint</mat-hint>
+    <mat-hint style="display: none">Hint</mat-hint>
     <mat-error *ngIf="searchText?.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Select an option</mat-label>
+  <mat-form-field class="option" appearance="outline">
+    <mat-label>Select city</mat-label>
     <mat-select>
       <mat-option>None</mat-option>
       <mat-option value="option1">Option 1</mat-option>
       <mat-option value="option2">Option 2</mat-option>
       <mat-option value="option3">Option 3</mat-option>
     </mat-select>
+    <mat-icon matSuffix>expand_more</mat-icon>
   </mat-form-field>
 </form>
 
 <button mat-flat-button (click)="openDialog()">
   <mat-icon>add</mat-icon>
-  Add
+  <span>Add</span>
 </button>
 <button mat-stroked-button>
   <mat-icon>import_export</mat-icon>
-  Import
+  <span>Import</span>
 </button>
 <button mat-stroked-button>
   <mat-icon>import_export</mat-icon>
-  Export
+  <span>Export</span>
 </button>
 
+</div>
 
+<div class="wrapper">
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
   <!-- Checkbox Column -->
   <ng-container matColumnDef="select">
@@ -80,3 +84,4 @@
       (click)="selection.toggle(row)">
   </tr>
 </table>
+</div>

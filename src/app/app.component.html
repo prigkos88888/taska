@@ -1,3 +1,11 @@
 <app-header></app-header>
-<app-sidenav [ngClass]="{'is-open-sidenav': appService.isSidenavOpen$ | async}"></app-sidenav>
-<router-outlet></router-outlet>
+
+<div class="content-body">
+  <app-sidenav [ngClass]="{'is-open-sidenav': appService.isSidenavOpen$ | async}"></app-sidenav>
+
+  <div class="another-content" [class.bf-0]="appService.isSidenavOpen$ | async">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="bg-color" [ngClass]="{'is-open-sidenav': appService.isSidenavOpen$ | async}"></div>
+</div>

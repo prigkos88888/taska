@@ -1,0 +1,40 @@
+@import '../../styles/config';
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $black;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+.mat-dialog-title {
+  margin-bottom: 32px;
+  font-size: 25px;
+  line-height: 22px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+}
+
+mat-dialog-actions {
+  button:first-child {
+    background: $bg-transparent;
+    border: 1px solid $black-opacity2;
+    color: $light-grey;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+  }
+
+  button:last-child {
+    background: $blue;
+    color: $white;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+  }
+}

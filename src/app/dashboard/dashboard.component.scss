@@ -1,0 +1,178 @@
+@import '../styles/config';
+
+:host ::ng-deep {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.line-first {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  form mat-form-field {
+    &.search {
+      width: 450px;
+
+      mat-icon {
+        top: -2px;
+        position: relative;
+      }
+    }
+
+    &.option {
+      width: 170px;
+      margin-left: 16px;
+
+      mat-icon {
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        top: -2px;
+      }
+    }
+  }
+
+  ::ng-deep button {
+    margin-left: 15px;
+    transition: all 0.2s;
+
+    &.mat-flat-button {
+      margin-left: auto;
+    }
+
+    &.mat-stroked-button:hover {
+      background: $blue-light-opacity;
+    }
+
+    .mat-button-wrapper {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+mat-error {
+  color: $red;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+::ng-deep .line-first .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.391em 0 !important;
+}
+
+::ng-deep .line-first .mat-form-field-label-wrapper {
+  top: -1.45em;
+}
+
+::ng-deep .line-first .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep .line-first .mat-form-field-appearance-outline .mat-form-field-prefix,
+::ng-deep .line-first .mat-form-field-appearance-outline .mat-form-field-suffix {
+  top: .20em !important;
+}
+
+::ng-deep .line-first .search mat-label,
+::ng-deep .line-first .option mat-label {
+  color: $light-grey;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  background: $bg-transparent;
+  padding: 0 5px;
+}
+
+
+::ng-deep .line-first .option mat-label {
+  color: $black;
+  margin-left: -5px;
+}
+
+::ng-deep .line-first .mat-form-field-appearance-outline {
+  &:not(.mat-form-field-invalid) .mat-form-field-outline-start {
+    border: 1px solid $black-opacity2;
+    border-right: transparent;
+  }
+
+  &:not(.mat-form-field-invalid) .mat-form-field-outline-gap {
+    border-top: 1px solid $black-opacity2;
+    border-bottom: 1px solid $black-opacity2;
+  }
+
+  &:not(.mat-form-field-invalid) .mat-form-field-outline-end {
+    border: 1px solid $black-opacity2;
+    border-left: transparent;
+  }
+
+  &.mat-form-field-invalid {
+    .mat-form-field-outline-start {
+      border: 1px solid $red;
+      border-right: transparent;
+    }
+
+    .mat-form-field-outline-gap {
+      border-top: 1px solid $red;
+      border-bottom: 1px solid $red;
+    }
+
+    .mat-form-field-outline-end {
+      border: 1px solid $red;
+      border-left: transparent;
+    }
+  }
+
+}
+
+::ng-deep .line-first .mat-select-value {
+  position: relative;
+  top: -2px;
+}
+
+::ng-deep .option .mat-select-arrow {
+  opacity: 0;
+}
+
+::ng-deep .line-first input.mat-input-element {
+  margin-top: -0.0625em;
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+}
+
+::ng-deep .line-first .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+}
+
+::ng-deep .line-first .mat-form-field mat-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  font-size: 21px;
+}
+
+::ng-deep .line-first .mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 0 15px !important;
+}
+
+::ng-deep .line-first .option.mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 0 15px 0 10px !important;
+}
+
+.wrapper {
+  overflow-x: auto;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+  box-shadow: initial;
+}

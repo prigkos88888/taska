@@ -33,11 +33,219 @@ $test-job-itstep-theme: mat.define-light-theme((
 // Include the theme mixins for other components you use here.
 
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import 'app/styles/config';
+
 html,
 body {
   height: 100%;
 }
-body {
+
+h3, h4, h5, h6 {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0;
 }
+
+h2, p {
+  margin: 0;
+}
+
+mat-icon {
+  color: $light-grey;
+}
+
+.another-content {
+  min-height: calc(100vh - #{$height-header});
+  padding: 33px 32px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &.bf-0 {
+    width: calc(100% - #{$left-sidebar});
+    pointer-events: none;
+  }
+}
+
+.bg-color.is-open-sidenav {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background: $black-opacity;
+}
+
+.content-body {
+  display: flex;
+  position: relative;
+
+  app-sidenav {
+    width: $left-sidebar;
+    display: none;
+
+    &.is-open-sidenav {
+      display: block;
+    }
+  }
+}
+
+.standart-mat-menu {
+  background: $white;
+
+  button {
+    background: $bg-transparent;
+    color: $black;
+    font-size: 16px;
+
+    &:hover {
+      background: $light-grey-hover;
+    }
+  }
+}
+
+app-header {
+  display: block;
+  height: $height-header;
+}
+
+.mat-select-panel-wrap {
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  background: $white;
+
+  & > div {
+    min-width: 100% !important;
+  }
+}
+
+.mat-form-field,
+.mat-option {
+  font-family: 'Lato', sans-serif !important;
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+//Buttons
+button.mat-flat-button {
+  min-width: 84px;
+  padding: 0;
+  line-height: initial;
+  background: $blue;
+
+  mat-icon {
+    color: $white;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    left: -4px;
+    position: relative;
+  }
+
+  .mat-button-wrapper span {
+    margin-left: 7px;
+    color: $white;
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+button.mat-button {
+  min-width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-left: 16px !important;
+}
+
+button.mat-stroked-button {
+  max-width: 100px;
+  max-height: 40px;
+  line-height: initial;
+  background: $bg-transparent;
+  border: 1px solid $black-opacity2;
+
+  mat-icon {
+    color: $light-grey;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -1px;
+    left: -4px;
+  }
+
+  .mat-button-wrapper span {
+    margin-left: 7px;
+    color: $light-grey;
+  }
+
+}
+
+//end Buttons
+
+//Modal
+.modal-wrapper {
+  width: 784px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  box-sizing: border-box;
+  padding: 32px;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+//end Modal
+
+//table
+.mat-cell, .mat-footer-cell {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: $black;
+  font-family: 'Lato', sans-serif;
+}
+
+tr.mat-row, tr.mat-footer-row, tr.mat-header-row {
+  height: 49px !important;
+}
+
+tr.mat-header-row th {
+  border-top: solid 1px #E1E2E2;
+}
+
+.mat-checkbox-checked .mat-checkbox-background {
+  background: $blue;
+}
+
+.mat-checkbox-frame {
+  border: 1px solid #B3B8BD !important;
+  border-radius: 4px !important;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  border-color: #E1E2E2;
+}
+
+.mat-sort-header-content {
+  color: $light-grey;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+//end table
